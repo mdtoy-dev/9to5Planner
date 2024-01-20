@@ -2,10 +2,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: #475f82;
 }
 
 textarea {
-  background: transparent;
+  background: rgba(221, 160, 221, 0.277) !important;
   border: none;
   resize: none;
   color: #000000;
@@ -15,11 +16,9 @@ textarea {
 
 header {
   text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
+  background: linear-gradient(to bottom,#1a988f,#b150c6);  border-radius: 0;
   border-bottom: 10px solid black;
-  padding: 60px;
+  padding: 50px;
 }
 
 .description {
@@ -39,9 +38,9 @@ header {
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: transparent;
   color: #000000;
-  
+  border-right: 1px solid black;
 }
 
 .past {
