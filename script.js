@@ -3,7 +3,7 @@ function createTimeBlock(id, timeClass, text) {
 
     $('<div>', {
         text: text,
-        class: 'hour col-1',
+        class: 'hour col-2',
     }).appendTo(timeBlock);
 
     $('<div>', {
@@ -12,7 +12,7 @@ function createTimeBlock(id, timeClass, text) {
 
     $('<button>', {
         text: 'Save',
-        class: 'saveBtn col-1',
+        class: 'saveBtn col-2',
     }).appendTo(timeBlock);
 
     return timeBlock;
@@ -43,7 +43,7 @@ $(document).ready(function () {
                 class: "form-control form-control-sm",
                 rows: 3,
                 val: value,
-                id: "textarea-" + id,
+                id: id,
             });
             textarea.appendTo(timeBlock.find(".content"));
         }
