@@ -8,6 +8,10 @@ $(document).ready(function(){
     for (var i = 9; i < 18; i++) {
         let hourDiv = $("<div>", {id: "hour-" + i, class: "row time-block align-items-center justify-content-evenly"});
         
+        if (i < dayjs().hour()) {hourDiv.addClass("past");}
+        else if (i === dayjs().hour()) {hourDiv.addClass("present");}
+        else {hourDiv.addClass("future");}
+
         $('<div>', {
             text: i + ':00',
             class: 'hour col-1'
@@ -21,5 +25,4 @@ $(document).ready(function(){
           }).appendTo(hourDiv);
         hourDiv.appendTo(timeBlocks);
         }
-
 });    
