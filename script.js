@@ -1,5 +1,5 @@
-function createTimeBlock(id, cssClass, text) {
-    var timeBlock = $("<div>", { id: id, class: "row time-block align-items-center justify-content-evenly " + cssClass });
+function createTimeBlock(id, timeClass, text) {
+    var timeBlock = $("<div>", { id: id, class: "row time-block align-items-center justify-content-evenly " + timeClass });
 
     $('<div>', {
         text: text,
@@ -31,9 +31,9 @@ $(document).ready(function () {
     // Get existing values from localStorage and create time blocks
     for (var i = 9; i < 18; i++) {
         var id = "hour-" + i;
-        var cssClass = i < dayjs().hour() ? "past" : i === dayjs().hour() ? "present" : "future";
+        var timeClass = i < dayjs().hour() ? "past" : i === dayjs().hour() ? "present" : "future";
 
-        var timeBlock = createTimeBlock(id, cssClass, i + ':00');
+        var timeBlock = createTimeBlock(id, timeClass, i + ':00');
         timeBlock.appendTo(timeBlocks);
 
         var value = localStorage.getItem(id);
