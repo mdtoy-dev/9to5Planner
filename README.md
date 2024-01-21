@@ -1,6 +1,6 @@
 # 9to5Planner
 
-![9to5Planner](./9to5.png)
+![9to5Planner](./9to5.jpeg)
 
 ## Description
 
